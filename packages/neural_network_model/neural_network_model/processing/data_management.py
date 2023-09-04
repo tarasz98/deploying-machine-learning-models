@@ -94,7 +94,7 @@ def load_pipeline_keras() -> Pipeline:
 
     classifier = KerasClassifier(build_fn=build_model,
                                  batch_size=config.BATCH_SIZE,
-                                 validation_split=10,
+                                 validation_split=0.10,
                                  epochs=config.EPOCHS,
                                  verbose=2,
                                  callbacks=m.callbacks_list,
